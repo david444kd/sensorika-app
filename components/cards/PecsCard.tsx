@@ -6,12 +6,29 @@ import Toast from './Toast'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { Mic } from 'lucide-react'
+import { useLocale } from 'next-intl'
 
 export default function PecsCard({ item }: { item: CardItem }) {
+  const locale = useLocale()
+
+  const speak = (text: string) => {
+    if (locale !== 'ru') {
+      return
+    }
+    if (!('speechSynthesis' in window)) {
+      toast.error('Ваш браузер не поддерживает синтез речи.')
+      return
+    }
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang = 'ru-RU'
+    window.speechSynthesis.speak(utterance)
+  }
+
   return (
     <Card
       className='border-2 hover:border-primary/50 transition-all overflow-hidden cursor-pointer'
       onClick={() => {
+        speak(item.title)
         toast.success(<Toast item={item} />)
       }}
     >
