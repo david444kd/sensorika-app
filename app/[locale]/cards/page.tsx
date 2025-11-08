@@ -1,13 +1,16 @@
 'use client'
 
-import { Category, CARDS } from '@/lib/cards/cards'
+import { Category, getCards } from '@/lib/cards/cards'
 import { Toaster } from 'react-hot-toast'
 import PecsCard from '@/components/cards/PecsCard'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import ToggleCategory from '@/components/cards/ToggleCategory'
+import { useTranslations } from 'next-intl'
 
 export default function CardsPage() {
+  const t = useTranslations()
   const [category, setCategory] = useState<Category>('eat')
+  const CARDS = useMemo(() => getCards(t), [t])
   const items = CARDS[category]
 
   return (

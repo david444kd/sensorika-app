@@ -7,199 +7,177 @@ export type CardItem = {
   imageAlt: string
 }
 
-export const CARDS: Record<Category, CardItem[]> = {
-  eat: [
-    {
-      title: 'Яблочный сок',
-      description: 'Освежающий напиток из яблок',
-      imageSrc: '/eat/apple_juice.png',
-      imageAlt: 'Яблочный сок',
-    },
-
-    {
-      title: 'Яблоко',
-      description: 'Спелый фрукт, красный или зелёный',
-      imageSrc: '/eat/apple.jpg',
-      imageAlt: 'Яблоко',
-    },
-
-    {
-      title: 'Банан',
-      description: 'Сладкий и питательный фрукт',
-      imageSrc: '/eat/banana.jpg',
-      imageAlt: 'Банан',
-    },
-
-    {
-      title: 'Бургер',
-      description: 'Сочный бургер с котлетой',
-      imageSrc: '/eat/burger.jpg',
-      imageAlt: 'Бургер',
-    },
-
-    {
-      title: 'Морковь',
-      description: 'Овощ, богатый витамином A',
-      imageSrc: '/eat/carrot.png',
-      imageAlt: 'Морковь',
-    },
-
-    {
-      title: 'Какао',
-      description: 'Тёплый шоколадный напиток',
-      imageSrc: '/eat/cocoa.png',
-      imageAlt: 'Какао',
-    },
-
-    {
-      title: 'Ужин',
-      description: 'Тарелка с полезной едой',
-      imageSrc: '/eat/dinner.jpg',
-      imageAlt: 'Ужин',
-    },
-
-    {
-      title: 'Картофель фри',
-      description: 'Хрустящие ломтики картофеля',
-      imageSrc: '/eat/french-fries.png',
-      imageAlt: 'Картофель фри',
-    },
-
-    {
-      title: 'Виноград',
-      description: 'Сладкие ягодки, зелёные или фиолетовые',
-      imageSrc: '/eat/grape.png',
-      imageAlt: 'Виноград',
-    },
-
-    {
-      title: 'Хот-дог',
-      description: 'Сосиска в булочке',
-      imageSrc: '/eat/hotdog.png',
-      imageAlt: 'Хот-дог',
-    },
-
-    {
-      title: 'Кимчи',
-      description: 'Острая корейская закуска',
-      imageSrc: '/eat/kimchi.png',
-      imageAlt: 'Кимчи',
-    },
-
-    {
-      title: 'Обед',
-      description: 'Сытный приём пищи днём',
-      imageSrc: '/eat/lunch.jpg',
-      imageAlt: 'Обед',
-    },
-
-    {
-      title: 'Молоко',
-      description: 'Источник кальция',
-      imageSrc: '/eat/milk.png',
-      imageAlt: 'Молоко',
-    },
-
-    {
-      title: 'Апельсин',
-      description: 'Цитрус с витамином C',
-      imageSrc: '/eat/orange.jpg',
-      imageAlt: 'Апельсин',
-    },
-
-    {
-      title: 'Блинчики',
-      description: 'Нежные панкейки на завтрак',
-      imageSrc: '/eat/pancakes.png',
-      imageAlt: 'Блинчики',
-    },
-
-    {
-      title: 'Ролл',
-      description: 'Небольшой рулет/ролл',
-      imageSrc: '/eat/roll.png',
-      imageAlt: 'Ролл',
-    },
-
-    {
-      title: 'Креветки',
-      description: 'Морепродукты, богатые белком',
-      imageSrc: '/eat/shrimp.jpg',
-      imageAlt: 'Креветки',
-    },
-
-    {
-      title: 'Чай',
-      description: 'Горячий напиток — чёрный или зелёный',
-      imageSrc: '/eat/tea.png',
-      imageAlt: 'Чай',
-    },
-
-    {
-      title: 'Вафля',
-      description: 'Сладкая хрустящая вафля',
-      imageSrc: '/eat/waffle.jpg',
-      imageAlt: 'Вафля',
-    },
-
-    {
-      title: 'Вода',
-      description: 'Чистая питьевая вода',
-      imageSrc: '/eat/water.png',
-      imageAlt: 'Вода',
-    },
-
-    {
-      title: 'Арбуз',
-      description: 'Сочный летний плод',
-      imageSrc: '/eat/watermelon.png',
-      imageAlt: 'Арбуз',
-    },
-  ],
-
-  games: [
-    {
-      title: 'Пазл',
-      description: 'Собери картинку',
-      imageSrc: '/next.svg',
-      imageAlt: 'Пазл',
-    },
-
-    {
-      title: 'Мяч',
-      description: 'Игры на координацию',
-      imageSrc: '/vercel.svg',
-      imageAlt: 'Мяч',
-    },
-
-    {
-      title: 'Кубики',
-      description: 'Построй башню',
-      imageSrc: '/globe.svg',
-      imageAlt: 'Кубики',
-    },
-  ],
-
-  actions: [
-    {
-      title: 'Мыть руки',
-      description: 'Перед едой и после прогулки',
-      imageSrc: '/file.svg',
-      imageAlt: 'Мыть руки',
-    },
-
-    {
-      title: 'Чистить зубы',
-      description: 'Утром и вечером',
-      imageSrc: '/window.svg',
-      imageAlt: 'Чистить зубы',
-    },
-
-    {
-      title: 'Одеваться',
-      description: 'Надеваем куртку, шапку',
-      imageSrc: '/vercel.svg',
-      imageAlt: 'Одеваться',
-    },
-  ],
+export function getCards(
+  t: (key: string) => string
+): Record<Category, CardItem[]> {
+  return {
+    eat: [
+      {
+        title: t('Cards.items.eat.apple_juice.title'),
+        description: t('Cards.items.eat.apple_juice.description'),
+        imageSrc: '/eat/apple_juice.png',
+        imageAlt: t('Cards.items.eat.apple_juice.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.apple.title'),
+        description: t('Cards.items.eat.apple.description'),
+        imageSrc: '/eat/apple.jpg',
+        imageAlt: t('Cards.items.eat.apple.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.banana.title'),
+        description: t('Cards.items.eat.banana.description'),
+        imageSrc: '/eat/banana.jpg',
+        imageAlt: t('Cards.items.eat.banana.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.burger.title'),
+        description: t('Cards.items.eat.burger.description'),
+        imageSrc: '/eat/burger.jpg',
+        imageAlt: t('Cards.items.eat.burger.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.carrot.title'),
+        description: t('Cards.items.eat.carrot.description'),
+        imageSrc: '/eat/carrot.png',
+        imageAlt: t('Cards.items.eat.carrot.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.cocoa.title'),
+        description: t('Cards.items.eat.cocoa.description'),
+        imageSrc: '/eat/cocoa.png',
+        imageAlt: t('Cards.items.eat.cocoa.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.dinner.title'),
+        description: t('Cards.items.eat.dinner.description'),
+        imageSrc: '/eat/dinner.jpg',
+        imageAlt: t('Cards.items.eat.dinner.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.french-fries.title'),
+        description: t('Cards.items.eat.french-fries.description'),
+        imageSrc: '/eat/french-fries.png',
+        imageAlt: t('Cards.items.eat.french-fries.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.grape.title'),
+        description: t('Cards.items.eat.grape.description'),
+        imageSrc: '/eat/grape.png',
+        imageAlt: t('Cards.items.eat.grape.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.hotdog.title'),
+        description: t('Cards.items.eat.hotdog.description'),
+        imageSrc: '/eat/hotdog.png',
+        imageAlt: t('Cards.items.eat.hotdog.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.kimchi.title'),
+        description: t('Cards.items.eat.kimchi.description'),
+        imageSrc: '/eat/kimchi.png',
+        imageAlt: t('Cards.items.eat.kimchi.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.lunch.title'),
+        description: t('Cards.items.eat.lunch.description'),
+        imageSrc: '/eat/lunch.jpg',
+        imageAlt: t('Cards.items.eat.lunch.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.milk.title'),
+        description: t('Cards.items.eat.milk.description'),
+        imageSrc: '/eat/milk.png',
+        imageAlt: t('Cards.items.eat.milk.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.orange.title'),
+        description: t('Cards.items.eat.orange.description'),
+        imageSrc: '/eat/orange.jpg',
+        imageAlt: t('Cards.items.eat.orange.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.pancakes.title'),
+        description: t('Cards.items.eat.pancakes.description'),
+        imageSrc: '/eat/pancakes.png',
+        imageAlt: t('Cards.items.eat.pancakes.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.roll.title'),
+        description: t('Cards.items.eat.roll.description'),
+        imageSrc: '/eat/roll.png',
+        imageAlt: t('Cards.items.eat.roll.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.shrimp.title'),
+        description: t('Cards.items.eat.shrimp.description'),
+        imageSrc: '/eat/shrimp.jpg',
+        imageAlt: t('Cards.items.eat.shrimp.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.tea.title'),
+        description: t('Cards.items.eat.tea.description'),
+        imageSrc: '/eat/tea.png',
+        imageAlt: t('Cards.items.eat.tea.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.waffle.title'),
+        description: t('Cards.items.eat.waffle.description'),
+        imageSrc: '/eat/waffle.jpg',
+        imageAlt: t('Cards.items.eat.waffle.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.water.title'),
+        description: t('Cards.items.eat.water.description'),
+        imageSrc: '/eat/water.png',
+        imageAlt: t('Cards.items.eat.water.imageAlt'),
+      },
+      {
+        title: t('Cards.items.eat.watermelon.title'),
+        description: t('Cards.items.eat.watermelon.description'),
+        imageSrc: '/eat/watermelon.png',
+        imageAlt: t('Cards.items.eat.watermelon.imageAlt'),
+      },
+    ],
+    games: [
+      {
+        title: t('Cards.items.games.puzzle.title'),
+        description: t('Cards.items.games.puzzle.description'),
+        imageSrc: '/next.svg',
+        imageAlt: t('Cards.items.games.puzzle.imageAlt'),
+      },
+      {
+        title: t('Cards.items.games.ball.title'),
+        description: t('Cards.items.games.ball.description'),
+        imageSrc: '/vercel.svg',
+        imageAlt: t('Cards.items.games.ball.imageAlt'),
+      },
+      {
+        title: t('Cards.items.games.blocks.title'),
+        description: t('Cards.items.games.blocks.description'),
+        imageSrc: '/globe.svg',
+        imageAlt: t('Cards.items.games.blocks.imageAlt'),
+      },
+    ],
+    actions: [
+      {
+        title: t('Cards.items.actions.wash_hands.title'),
+        description: t('Cards.items.actions.wash_hands.description'),
+        imageSrc: '/file.svg',
+        imageAlt: t('Cards.items.actions.wash_hands.imageAlt'),
+      },
+      {
+        title: t('Cards.items.actions.brush_teeth.title'),
+        description: t('Cards.items.actions.brush_teeth.description'),
+        imageSrc: '/window.svg',
+        imageAlt: t('Cards.items.actions.brush_teeth.imageAlt'),
+      },
+      {
+        title: t('Cards.items.actions.dress.title'),
+        description: t('Cards.items.actions.dress.description'),
+        imageSrc: '/vercel.svg',
+        imageAlt: t('Cards.items.actions.dress.imageAlt'),
+      },
+    ],
+  }
 }
