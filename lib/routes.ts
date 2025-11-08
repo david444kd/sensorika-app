@@ -2,34 +2,28 @@ import { Activity, Map, Gamepad2, CreditCard } from "lucide-react"
 
 export type NavItem = {
   href: string
-  label: string
-  description: string
+  labelKey: string 
+  descriptionKey: string
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
 }
 
 export const routes: NavItem[] = [
   {
     href: "/tracker",
-    label: "Трекер",
-    description: "Трекер развития ребенка",
+    labelKey: "tracker",
+    descriptionKey: "tracker",
     icon: Activity,
   },
   {
     href: "/roadmap",
-    label: "Маршрут",
-    description: "Маршрут коррекции для родителей",
+    labelKey: "roadmap",
+    descriptionKey: "roadmap",
     icon: Map,
   },
   {
     href: "/cards",
-    label: "Карточки PECS",
-    description: "Карточки PECS",
+    labelKey: "cards",
+    descriptionKey: "cards",
     icon: CreditCard,
   },
-  // {
-  //   href: "/games",
-  //   label: "Игры",
-  //   description: "Игры для развития ребенка",
-  //   icon: Gamepad2,
-  // },
 ]

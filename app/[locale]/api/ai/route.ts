@@ -1,7 +1,10 @@
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 import { GoogleGenAI } from "@google/genai"
 
-export async function POST(req: Request) {
+export async function POST(
+  req: NextRequest,
+  context: { params: Promise<{ locale: string }> }
+) {
   try {
     const { prompt } = (await req.json()) as { prompt?: string }
     if (!prompt || typeof prompt !== "string") {

@@ -8,8 +8,11 @@ import { ResponseModal } from "@/components/tracker/ResponseModal"
 import { analyzeAssessment } from "@/lib/tracker/api"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Specialist from "@/components/tracker/Specialist"
+import { useTranslations, useLocale } from "next-intl"
 
 export default function ChildAssessmentPage() {
+  const t = useTranslations('Tracker')
+  const locale = useLocale()
   const [loading, setLoading] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
   const [responseText, setResponseText] = useState<string>("")
@@ -19,12 +22,12 @@ export default function ChildAssessmentPage() {
     setModalOpen(true)
     setLoading(true)
     try {
-      const text = await analyzeAssessment(values)
+      const text = await analyzeAssessment(values, locale)
       setResponseText(text)
-      toast.success('Результат оценки получен!')
+      toast.success(t('toast.success'))
     } catch {
-      setResponseText("Произошла ошибка при анализе. Попробуйте позже.")
-      toast.error('Ошибка при анализе данных')
+      setResponseText(t('error'))
+      toast.error(t('toast.error'))
     } finally {
       setLoading(false)
     }
@@ -33,13 +36,13 @@ export default function ChildAssessmentPage() {
     <div className="mx-auto p-3 space-y-6">
       <Tabs defaultValue="account">
         <TabsList className="w-full mb-3">
-          <TabsTrigger value="account">Я родитель</TabsTrigger>
-          <TabsTrigger value="password">Я специалист</TabsTrigger>
+          <TabsTrigger value="account">{t('tabs.parent')}</TabsTrigger>
+          <TabsTrigger value="password">{t('tabs.specialist')}</TabsTrigger>
         </TabsList>
         <TabsContent value="account">
           <header className="mb-4 gap-5 flex flex-col">
-            <h1 className="text-3xl font-extrabold">Оценка развития ребёнка</h1>
-            <p className="text-muted-foreground mt-1 text-sm">Перетяните ползунок для оценки подглавы (0–10), при необходимости добавьте комментарий.</p>
+            <h1 className="text-3xl font-extrabold">{t('title')}</h1>
+            <p className="text-muted-foreground mt-1 text-sm">{t('description')}</p>
           </header>
           <TrackerForm sendAI={sendAI} loading={loading}/>
         </TabsContent>

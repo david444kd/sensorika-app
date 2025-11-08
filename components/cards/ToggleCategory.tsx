@@ -1,5 +1,8 @@
+"use client"
+
 import { Category } from "@/lib/cards/cards"
 import { ToggleGroup, ToggleGroupItem } from "../ui/toggle-group"
+import { useTranslations } from "next-intl"
 
 type Props = {
   category: Category,
@@ -7,6 +10,8 @@ type Props = {
 }
 
 export default function ToggleCategory({category, setCategory}: Props){
+  const t = useTranslations('Cards.categories')
+  
   return (
     <ToggleGroup
         type="single"
@@ -16,14 +21,14 @@ export default function ToggleCategory({category, setCategory}: Props){
         value={category}
         onValueChange={(v) => v && setCategory(v as Category)}
       >
-        <ToggleGroupItem value="eat" aria-label="Еда" className="cursor-pointer">
-          Еда
+        <ToggleGroupItem value="eat" aria-label={t('eat')} className="cursor-pointer">
+          {t('eat')}
         </ToggleGroupItem>
-        <ToggleGroupItem value="games" aria-label="Игры" className="cursor-pointer">
-          Игры
+        <ToggleGroupItem value="games" aria-label={t('games')} className="cursor-pointer">
+          {t('games')}
         </ToggleGroupItem>
-        <ToggleGroupItem value="actions" aria-label="Действия" className="cursor-pointer">
-          Действия
+        <ToggleGroupItem value="actions" aria-label={t('actions')} className="cursor-pointer">
+          {t('actions')}
         </ToggleGroupItem>
       </ToggleGroup>
   )

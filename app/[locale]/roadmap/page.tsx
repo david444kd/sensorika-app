@@ -2,9 +2,13 @@ import SectionCenters from "@/components/roadmap/SectionCenters"
 import SectionGovSupport from "@/components/roadmap/SectionGovSupport"
 import SectionSpecialists from "@/components/roadmap/SectionSpecialists"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { sections } from "@/lib/roadmap/sections"
+import { getSections } from "@/lib/roadmap/sections"
+import { getTranslations } from "next-intl/server"
 
-export default function RoadmapPage() {
+export default async function RoadmapPage() {
+  const t = await getTranslations()
+  const sections = getSections(t)
+  
   return (
     <Accordion type="single" collapsible className="w-full p-3">
       {sections.map((section, index) => (

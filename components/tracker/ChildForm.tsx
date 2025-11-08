@@ -1,9 +1,12 @@
+"use client"
+
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { generateChildReport } from "@/lib/tracker/report"
+import { useTranslations } from "next-intl"
 
 export interface ChildFormValues {
   name: string
@@ -20,6 +23,7 @@ export function ChildForm({
   onCancel: () => void
   onSubmit: (values: ChildFormValues) => void
 }) {
+  const t = useTranslations('Tracker.childForm')
   const { register, handleSubmit, getValues } = useForm<ChildFormValues>({
     defaultValues,
   })
@@ -32,16 +36,16 @@ export function ChildForm({
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
       <div className="space-y-2">
-        <Label htmlFor="name">Имя</Label>
-        <Input id="name" placeholder="Введите имя" {...register("name", { required: true })} />
+        <Label htmlFor="name">{t('name')}</Label>
+        <Input id="name" placeholder={t('namePlaceholder')} {...register("name", { required: true })} />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="age">Возраст</Label>
-        <Input id="age" type="number" placeholder="Введите возраст" {...register("age", { valueAsNumber: true, required: true })} />
+        <Label htmlFor="age">{t('age')}</Label>
+        <Input id="age" type="number" placeholder={t('agePlaceholder')} {...register("age", { valueAsNumber: true, required: true })} />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="comment">Комментарий / особенности</Label>
-        <Textarea id="comment" placeholder="Введите комментарий специалиста" rows={4} {...register("comment")} />
+        <Label htmlFor="comment">{t('comment')}</Label>
+        <Textarea id="comment" placeholder={t('commentPlaceholder')} rows={4} {...register("comment")} />
       </div>
       <Button 
         type="button" 
@@ -49,14 +53,14 @@ export function ChildForm({
         className="w-full" 
         onClick={handleGenerateReport}
       >
-        Отчет для родителя
+        {t('reportButton')}
       </Button>
       <div className="flex gap-0">
         <Button type="button" variant="outline" onClick={onCancel} className="w-1/2 rounded-r-none">
-          Отмена
+          {t('cancel')}
         </Button>
         <Button type="submit" className="w-1/2 rounded-l-none">
-          Сохранить
+          {t('save')}
         </Button>
       </div>
     </form>

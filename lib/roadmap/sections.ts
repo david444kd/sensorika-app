@@ -1,80 +1,77 @@
-export  const sections = [
-  {
-    id: "specialists",
-    title: "👩‍⚕️ Специалисты",
-    description: "К каким специалистам обращаться и в каких случаях.",
-    specialists: [
-      {
-        name: "🧩 Логопед",
-        desc: "Помогает при нарушениях речи, звукопроизношения и словарного запаса.",
-        phone: "+7 777 111 22 33",
-      },
-      {
-        name: "🧠 Нейропсихолог",
-        desc: "Оценивает и развивает когнитивные функции: внимание, память, мышление.",
-        phone: "+7 705 555 66 77",
-      },
-      {
-        name: "🏃‍♀️ АФК-инструктор",
-        desc: "Занимается коррекционной физкультурой для укрепления моторики.",
-        phone: "+7 701 999 88 44",
-      },
-    ],
-  },
-  {
-    id: "gov_support",
-    title: "🏛 Государственная поддержка",
-    description: "Права, льготы и порядок оформления документов.",
-    sections: [
-      {
-        heading: "📄 Как оформить инвалидность",
-        text: `Для оформления инвалидности необходимо получить направление
-из поликлиники, пройти комиссию МСЭ. Документы: справки от специалистов,
-медицинская карта, заявление родителя. Обращение в местное отделение
-социальной защиты или ЦОН.`,
-      },
-      {
-        heading: "💰 Пособия и выплаты",
-        text: `Родителям детей с ОВЗ доступны ежемесячные пособия по уходу,
-налоговые льготы, а также компенсации на технические средства реабилитации.`,
-      },
-      {
-        heading: "🎓 Образование для детей с ОВЗ",
-        text: `Доступны инклюзивные классы, специализированные школы,
-надомное и онлайн обучение. Оформление через ПМПК.`,
-      },
-    ],
-  },
-  {
-    id: "centers",
-    title: "📍 Центры и учреждения",
-    description: "Список организаций, куда можно обратиться.",
-    centers: [
-      {
-        city: "Алматы",
-        list: [
-          {
-            name: "Центр коррекции речи №1",
-            address: "ул. Жандосова 120",
-            phone: "+7 727 333 44 55",
-          },
-          {
-            name: "ПМПК №3",
-            address: "пр. Абая 90",
-            phone: "+7 727 222 11 00",
-          },
-        ],
-      },
-      {
-        city: "Астана",
-        list: [
-          {
-            name: "Центр психолого-педагогической помощи",
-            address: "ул. Тауелсыздык 50",
-            phone: "+7 7172 777 88 99",
-          },
-        ],
-      },
-    ],
-  },
-]
+export function getSections(t: (key: string) => string) {
+  return [
+    {
+      id: "specialists",
+      title: t('Roadmap.sections.specialists.title'),
+      description: t('Roadmap.sections.specialists.description'),
+      specialists: [
+        {
+          name: t('Roadmap.sections.specialists.items.speech_therapist.name'),
+          desc: t('Roadmap.sections.specialists.items.speech_therapist.desc'),
+          phone: "+7 777 111 22 33",
+        },
+        {
+          name: t('Roadmap.sections.specialists.items.neuropsychologist.name'),
+          desc: t('Roadmap.sections.specialists.items.neuropsychologist.desc'),
+          phone: "+7 705 555 66 77",
+        },
+        {
+          name: t('Roadmap.sections.specialists.items.afk_instructor.name'),
+          desc: t('Roadmap.sections.specialists.items.afk_instructor.desc'),
+          phone: "+7 701 999 88 44",
+        },
+      ],
+    },
+    {
+      id: "gov_support",
+      title: t('Roadmap.sections.gov_support.title'),
+      description: t('Roadmap.sections.gov_support.description'),
+      sections: [
+        {
+          heading: t('Roadmap.sections.gov_support.items.disability.heading'),
+          text: t('Roadmap.sections.gov_support.items.disability.text'),
+        },
+        {
+          heading: t('Roadmap.sections.gov_support.items.benefits.heading'),
+          text: t('Roadmap.sections.gov_support.items.benefits.text'),
+        },
+        {
+          heading: t('Roadmap.sections.gov_support.items.education.heading'),
+          text: t('Roadmap.sections.gov_support.items.education.text'),
+        },
+      ],
+    },
+    {
+      id: "centers",
+      title: t('Roadmap.sections.centers.title'),
+      description: t('Roadmap.sections.centers.description'),
+      centers: [
+        {
+          city: t('Roadmap.sections.centers.cities.almaty'),
+          list: [
+            {
+              name: t('Roadmap.sections.centers.places.almaty.center1.name'),
+              address: t('Roadmap.sections.centers.places.almaty.center1.address'),
+              phone: "+7 727 333 44 55",
+            },
+            {
+              name: t('Roadmap.sections.centers.places.almaty.center2.name'),
+              address: t('Roadmap.sections.centers.places.almaty.center2.address'),
+              phone: "+7 727 222 11 00",
+            },
+          ],
+        },
+        {
+          city: t('Roadmap.sections.centers.cities.astana'),
+          list: [
+            {
+              name: t('Roadmap.sections.centers.places.astana.center1.name'),
+              address: t('Roadmap.sections.centers.places.astana.center1.address'),
+              phone: "+7 7172 777 88 99",
+            },
+          ],
+        },
+      ],
+    },
+  ]
+}

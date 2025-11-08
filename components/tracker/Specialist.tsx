@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { ChildForm } from "@/components/tracker/ChildForm"
+import { useTranslations } from "next-intl"
 
 interface Child {
   id: number
@@ -14,6 +15,7 @@ interface Child {
 }
 
 export default function Specialist() {
+  const t = useTranslations('Tracker.specialist')
   const [selectedChild, setSelectedChild] = useState<Child | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
 
@@ -52,8 +54,8 @@ export default function Specialist() {
     <main className="min-h-screen">
       <div className="max-w-6xl mx-auto space-y-8">
         <div className="flex flex-col gap-3">
-          <h1 className="text-3xl font-extrabold">Дети под сопровождением</h1>
-          <Button>Добавить ребенка</Button>
+          <h1 className="text-3xl font-extrabold">{t('title')}</h1>
+          <Button>{t('addChild')}</Button>
         </div>
 
         <div className="grid gap-4">
@@ -65,7 +67,7 @@ export default function Specialist() {
             >
               <CardHeader>
                 <CardTitle>{child.name}</CardTitle>
-                <CardDescription>Возраст: {child.age}</CardDescription>
+                <CardDescription>{t('age')} {child.age}</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">{child.description}</p>
@@ -81,7 +83,7 @@ export default function Specialist() {
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           <DialogHeader>
-            <DialogTitle>Редактирование информации о ребенке</DialogTitle>
+            <DialogTitle>{t('editDialog')}</DialogTitle>
           </DialogHeader>
           {selectedChild && (
             <ChildForm

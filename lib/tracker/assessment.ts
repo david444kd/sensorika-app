@@ -1,108 +1,110 @@
 import { Chapter } from "./types"
 
-export const ASSESSMENT: Chapter[] = [
-  {
-    id: "speech",
-    title: "1. ЛОГОПЕДИЧЕСКИЕ НАВЫКИ",
-    sections: [
-      {
-        id: "sounds",
-        title: "🔤 Звуки и произношение",
-        items: "Произношение основных звуков (свистящие, шипящие, сонорные)"
-      },
-      {
-        id: "articulation",
-        title: "🗣 Артикуляция",
-        items: "Работа органов артикуляции (губы, язык, челюсть, дыхание, голос)"
-      },
-      {
-        id: "vocab",
-        title: "💬 Словарь",
-        items: "Активный и пассивный словарь"
-      },
-      {
-        id: "syllables",
-        title: "🧩 Слоговая структура",
-        items: "Слоговая структура и автоматизация речи"
-      },
-      {
-        id: "phonemic",
-        title: "🪞 Фонематический слух",
-        items: "Фонематический слух и слуховая память"
-      }
-    ]
-  },
-  {
-    id: "sensomotor",
-    title: "2. СЕНСОМОТОРНОЕ РАЗВИТИЕ",
-    sections: [
-      {
-        id: "fine",
-        title: "✋ Мелкая моторика",
-        items: "Мелкая моторика и координация глаз–рука"
-      },
-      {
-        id: "gross",
-        title: "🦶 Крупная моторика",
-        items: "Крупная моторика, баланс и ориентировка в пространстве"
-      },
-      {
-        id: "senses",
-        title: "🧠 Сенсорика",
-        items: "Сенсорное восприятие (слух, осязание, зрение)"
-      },
-      {
-        id: "breath",
-        title: "💨 Дыхание",
-        items: "Контроль и сила выдоха при речи"
-      }
-    ]
-  },
-  {
-    id: "cognitive",
-    title: "🧠 3. КОГНИТИВНОЕ РАЗВИТИЕ",
-    sections: [
-      {
-        id: "attention",
-        title: "👁 Внимание",
-        items: "Концентрация, устойчивость и переключение внимания"
-      },
-      {
-        id: "memory",
-        title: "🧩 Память",
-        items: "Память (слуховая, зрительная, долговременная)"
-      },
-      {
-        id: "thinking",
-        title: "🔢 Мышление",
-        items: "Мышление (логика, связи, анализ)"
-      },
-      {
-        id: "play",
-        title: "🕹 Игровая активность",
-        items: "Игровая активность и следование правилам"
-      }
-    ]
-  },
-  {
-    id: "social",
-    title: "💖 4. ЭМОЦИОНАЛЬНОЕ И СОЦИАЛЬНОЕ РАЗВИТИЕ",
-    sections: [
-      {
-        id: "emotion",
-        title: "😊 Эмоциональное восприятие",
-        items: "Распознавание и управление эмоциями"
-      },
-      {
-        id: "comm",
-        title: "💬 Коммуникация",
-        items: "Коммуникация (инициация, реакции, невербальные средства)"
-      },
-      {
-        id: "socialize",
-        title: "🤝 Социализация",
-        items: "Социализация и взаимодействие в группе"
-      }
-    ]
-  }
-]
+export function getAssessment(t: (key: string) => string): Chapter[] {
+  return [
+    {
+      id: "speech",
+      title: t('Tracker.assessment.chapters.speech.title'),
+      sections: [
+        {
+          id: "sounds",
+          title: t('Tracker.assessment.chapters.speech.sections.sounds.title'),
+          items: t('Tracker.assessment.chapters.speech.sections.sounds.items')
+        },
+        {
+          id: "articulation",
+          title: t('Tracker.assessment.chapters.speech.sections.articulation.title'),
+          items: t('Tracker.assessment.chapters.speech.sections.articulation.items')
+        },
+        {
+          id: "vocab",
+          title: t('Tracker.assessment.chapters.speech.sections.vocab.title'),
+          items: t('Tracker.assessment.chapters.speech.sections.vocab.items')
+        },
+        {
+          id: "syllables",
+          title: t('Tracker.assessment.chapters.speech.sections.syllables.title'),
+          items: t('Tracker.assessment.chapters.speech.sections.syllables.items')
+        },
+        {
+          id: "phonemic",
+          title: t('Tracker.assessment.chapters.speech.sections.phonemic.title'),
+          items: t('Tracker.assessment.chapters.speech.sections.phonemic.items')
+        }
+      ]
+    },
+    {
+      id: "sensomotor",
+      title: t('Tracker.assessment.chapters.sensomotor.title'),
+      sections: [
+        {
+          id: "fine",
+          title: t('Tracker.assessment.chapters.sensomotor.sections.fine.title'),
+          items: t('Tracker.assessment.chapters.sensomotor.sections.fine.items')
+        },
+        {
+          id: "gross",
+          title: t('Tracker.assessment.chapters.sensomotor.sections.gross.title'),
+          items: t('Tracker.assessment.chapters.sensomotor.sections.gross.items')
+        },
+        {
+          id: "senses",
+          title: t('Tracker.assessment.chapters.sensomotor.sections.senses.title'),
+          items: t('Tracker.assessment.chapters.sensomotor.sections.senses.items')
+        },
+        {
+          id: "breath",
+          title: t('Tracker.assessment.chapters.sensomotor.sections.breath.title'),
+          items: t('Tracker.assessment.chapters.sensomotor.sections.breath.items')
+        }
+      ]
+    },
+    {
+      id: "cognitive",
+      title: t('Tracker.assessment.chapters.cognitive.title'),
+      sections: [
+        {
+          id: "attention",
+          title: t('Tracker.assessment.chapters.cognitive.sections.attention.title'),
+          items: t('Tracker.assessment.chapters.cognitive.sections.attention.items')
+        },
+        {
+          id: "memory",
+          title: t('Tracker.assessment.chapters.cognitive.sections.memory.title'),
+          items: t('Tracker.assessment.chapters.cognitive.sections.memory.items')
+        },
+        {
+          id: "thinking",
+          title: t('Tracker.assessment.chapters.cognitive.sections.thinking.title'),
+          items: t('Tracker.assessment.chapters.cognitive.sections.thinking.items')
+        },
+        {
+          id: "play",
+          title: t('Tracker.assessment.chapters.cognitive.sections.play.title'),
+          items: t('Tracker.assessment.chapters.cognitive.sections.play.items')
+        }
+      ]
+    },
+    {
+      id: "social",
+      title: t('Tracker.assessment.chapters.social.title'),
+      sections: [
+        {
+          id: "emotion",
+          title: t('Tracker.assessment.chapters.social.sections.emotion.title'),
+          items: t('Tracker.assessment.chapters.social.sections.emotion.items')
+        },
+        {
+          id: "comm",
+          title: t('Tracker.assessment.chapters.social.sections.comm.title'),
+          items: t('Tracker.assessment.chapters.social.sections.comm.items')
+        },
+        {
+          id: "socialize",
+          title: t('Tracker.assessment.chapters.social.sections.socialize.title'),
+          items: t('Tracker.assessment.chapters.social.sections.socialize.items')
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,13 @@
-import { ASSESSMENT } from "@/lib/tracker/assessment"
+"use client"
+
+import { getAssessment } from "@/lib/tracker/assessment"
 import { FormValues } from "@/lib/tracker/types"
 import { FormProvider, Path, useForm } from "react-hook-form"
 import { Button } from "../ui/button"
 import AssessmentCard from "./AssessmentCard"
 import { Spinner } from "../ui/spinner"
+import { useTranslations } from "next-intl"
+import { useMemo } from "react"
 
 export default function TrackerForm ({
   sendAI,
@@ -12,8 +16,11 @@ export default function TrackerForm ({
   sendAI: (values: FormValues) => void
   loading: boolean
 }) {
+  const t = useTranslations()
+  const ASSESSMENT = useMemo(() => getAssessment(t), [t])
+  
   const methods = useForm<FormValues>({
-    defaultValues: generateDefaultValues(),
+    defaultValues: generateDefaultValues(ASSESSMENT),
   })
   const { handleSubmit } = methods
 
@@ -49,7 +56,7 @@ export default function TrackerForm ({
         <div className="fixed max-w-2xl mx-auto inset-x-0 bottom-0 z-40">
           <div className="mx-auto w-full bg-white">
             <Button disabled={loading} type="submit" className="cursor-pointer w-full h-14 rounded-t-xl rounded-b-none text-base font-extrabold">
-            {loading && <Spinner className="w-5 h-5" />} Получить рекомендации
+            {loading && <Spinner className="w-5 h-5" />} {t('Tracker.button')}
             </Button>
           </div>
         </div>
@@ -58,9 +65,9 @@ export default function TrackerForm ({
   )
 }
 
-function generateDefaultValues(): FormValues {
+function generateDefaultValues(assessment: ReturnType<typeof getAssessment>): FormValues {
   const out: FormValues = {}
-  for (const ch of ASSESSMENT) {
+  for (const ch of assessment) {
     out[ch.id] = {}
     for (const s of ch.sections) {
       out[ch.id][s.id] = { score: [0], comment: "" }

@@ -1,0 +1,365 @@
+{
+  "Home": {
+    "title": "Welcome",
+    "description": "Select where you want to go",
+    "footer": "Click on any card to begin"
+  },
+  "Routes": {
+    "tracker": {
+      "label": "Tracker",
+      "description": "Child development tracker"
+    },
+    "roadmap": {
+      "label": "Roadmap",
+      "description": "Correction roadmap for parents"
+    },
+    "cards": {
+      "label": "PECS Cards",
+      "description": "PECS Cards"
+    }
+  },
+  "Tracker": {
+    "tabs": {
+      "parent": "I am a parent",
+      "specialist": "I am a specialist"
+    },
+    "title": "Child Development Assessment",
+    "description": "Drag the slider to rate the subsection (0–10), add a comment if necessary.",
+    "button": "Get recommendations",
+    "toast": {
+      "success": "Assessment result received!",
+      "error": "Error analyzing data"
+    },
+    "error": "An error occurred during analysis. Please try again later.",
+    "modal": {
+      "title": "Analysis result",
+      "loading": "Generating recommendations…",
+      "close": "Close",
+      "done": "Done"
+    },
+    "assessment": {
+      "score": "Score (0 — low, 10 — high)",
+      "currentValue": "Current value:",
+      "maxLength": "Maximum 1000 characters",
+      "chapters": {
+        "speech": {
+          "title": "1. SPEECH THERAPY SKILLS",
+          "sections": {
+            "sounds": {
+              "title": "🔤 Sounds and pronunciation",
+              "items": "Pronunciation of basic sounds (sibilants, fricatives, sonorants)"
+            },
+            "articulation": {
+              "title": "🗣 Articulation",
+              "items": "Articulation organs work (lips, tongue, jaw, breathing, voice)"
+            },
+            "vocab": {
+              "title": "💬 Vocabulary",
+              "items": "Active and passive vocabulary"
+            },
+            "syllables": {
+              "title": "🧩 Syllable structure",
+              "items": "Syllable structure and speech automation"
+            },
+            "phonemic": {
+              "title": "🪞 Phonemic hearing",
+              "items": "Phonemic hearing and auditory memory"
+            }
+          }
+        },
+        "sensomotor": {
+          "title": "2. SENSORIMOTOR DEVELOPMENT",
+          "sections": {
+            "fine": {
+              "title": "✋ Fine motor skills",
+              "items": "Fine motor skills and eye-hand coordination"
+            },
+            "gross": {
+              "title": "🦶 Gross motor skills",
+              "items": "Gross motor skills, balance and spatial orientation"
+            },
+            "senses": {
+              "title": "🧠 Sensory",
+              "items": "Sensory perception (hearing, touch, vision)"
+            },
+            "breath": {
+              "title": "💨 Breathing",
+              "items": "Control and strength of exhalation during speech"
+            }
+          }
+        },
+        "cognitive": {
+          "title": "🧠 3. COGNITIVE DEVELOPMENT",
+          "sections": {
+            "attention": {
+              "title": "👁 Attention",
+              "items": "Concentration, stability and attention switching"
+            },
+            "memory": {
+              "title": "🧩 Memory",
+              "items": "Memory (auditory, visual, long-term)"
+            },
+            "thinking": {
+              "title": "🔢 Thinking",
+              "items": "Thinking (logic, connections, analysis)"
+            },
+            "play": {
+              "title": "🕹 Play activity",
+              "items": "Play activity and following rules"
+            }
+          }
+        },
+        "social": {
+          "title": "💖 4. EMOTIONAL AND SOCIAL DEVELOPMENT",
+          "sections": {
+            "emotion": {
+              "title": "😊 Emotional perception",
+              "items": "Emotion recognition and management"
+            },
+            "comm": {
+              "title": "💬 Communication",
+              "items": "Communication (initiation, reactions, non-verbal means)"
+            },
+            "socialize": {
+              "title": "🤝 Socialization",
+              "items": "Socialization and group interaction"
+            }
+          }
+        }
+      }
+    },
+    "specialist": {
+      "title": "Children under supervision",
+      "addChild": "Add child",
+      "age": "Age:",
+      "editDialog": "Edit child information"
+    },
+    "childForm": {
+      "name": "Name",
+      "namePlaceholder": "Enter name",
+      "age": "Age",
+      "agePlaceholder": "Enter age",
+      "comment": "Comment / features",
+      "commentPlaceholder": "Enter specialist comment",
+      "reportButton": "Report for parent",
+      "cancel": "Cancel",
+      "save": "Save"
+    }
+  },
+  "Cards": {
+    "categories": {
+      "eat": "Food",
+      "games": "Games",
+      "actions": "Actions"
+    },
+    "items": {
+      "eat": {
+        "apple_juice": {
+          "title": "Apple juice",
+          "description": "Refreshing apple drink",
+          "imageAlt": "Apple juice"
+        },
+        "apple": {
+          "title": "Apple",
+          "description": "Ripe fruit, red or green",
+          "imageAlt": "Apple"
+        },
+        "banana": {
+          "title": "Banana",
+          "description": "Sweet and nutritious fruit",
+          "imageAlt": "Banana"
+        },
+        "burger": {
+          "title": "Burger",
+          "description": "Juicy burger with patty",
+          "imageAlt": "Burger"
+        },
+        "carrot": {
+          "title": "Carrot",
+          "description": "Vegetable rich in vitamin A",
+          "imageAlt": "Carrot"
+        },
+        "cocoa": {
+          "title": "Cocoa",
+          "description": "Warm chocolate drink",
+          "imageAlt": "Cocoa"
+        },
+        "dinner": {
+          "title": "Dinner",
+          "description": "Plate with healthy food",
+          "imageAlt": "Dinner"
+        },
+        "french-fries": {
+          "title": "French fries",
+          "description": "Crispy potato slices",
+          "imageAlt": "French fries"
+        },
+        "grape": {
+          "title": "Grape",
+          "description": "Sweet berries, green or purple",
+          "imageAlt": "Grape"
+        },
+        "hotdog": {
+          "title": "Hot dog",
+          "description": "Sausage in a bun",
+          "imageAlt": "Hot dog"
+        },
+        "kimchi": {
+          "title": "Kimchi",
+          "description": "Spicy Korean snack",
+          "imageAlt": "Kimchi"
+        },
+        "lunch": {
+          "title": "Lunch",
+          "description": "Hearty midday meal",
+          "imageAlt": "Lunch"
+        },
+        "milk": {
+          "title": "Milk",
+          "description": "Source of calcium",
+          "imageAlt": "Milk"
+        },
+        "orange": {
+          "title": "Orange",
+          "description": "Citrus with vitamin C",
+          "imageAlt": "Orange"
+        },
+        "pancakes": {
+          "title": "Pancakes",
+          "description": "Tender breakfast pancakes",
+          "imageAlt": "Pancakes"
+        },
+        "roll": {
+          "title": "Roll",
+          "description": "Small roll/wrap",
+          "imageAlt": "Roll"
+        },
+        "shrimp": {
+          "title": "Shrimp",
+          "description": "Seafood rich in protein",
+          "imageAlt": "Shrimp"
+        },
+        "tea": {
+          "title": "Tea",
+          "description": "Hot drink — black or green",
+          "imageAlt": "Tea"
+        },
+        "waffle": {
+          "title": "Waffle",
+          "description": "Sweet crispy waffle",
+          "imageAlt": "Waffle"
+        },
+        "water": {
+          "title": "Water",
+          "description": "Clean drinking water",
+          "imageAlt": "Water"
+        },
+        "watermelon": {
+          "title": "Watermelon",
+          "description": "Juicy summer fruit",
+          "imageAlt": "Watermelon"
+        }
+      },
+      "games": {
+        "puzzle": {
+          "title": "Puzzle",
+          "description": "Assemble the picture",
+          "imageAlt": "Puzzle"
+        },
+        "ball": {
+          "title": "Ball",
+          "description": "Coordination games",
+          "imageAlt": "Ball"
+        },
+        "blocks": {
+          "title": "Blocks",
+          "description": "Build a tower",
+          "imageAlt": "Blocks"
+        }
+      },
+      "actions": {
+        "wash_hands": {
+          "title": "Wash hands",
+          "description": "Before meals and after walks",
+          "imageAlt": "Wash hands"
+        },
+        "brush_teeth": {
+          "title": "Brush teeth",
+          "description": "Morning and evening",
+          "imageAlt": "Brush teeth"
+        },
+        "dress": {
+          "title": "Get dressed",
+          "description": "Put on jacket, hat",
+          "imageAlt": "Get dressed"
+        }
+      }
+    }
+  },
+  "Roadmap": {
+    "sections": {
+      "specialists": {
+        "title": "👩‍⚕️ Specialists",
+        "description": "Which specialists to contact and in what cases.",
+        "items": {
+          "speech_therapist": {
+            "name": "🧩 Speech therapist",
+            "desc": "Helps with speech disorders, pronunciation and vocabulary."
+          },
+          "neuropsychologist": {
+            "name": "🧠 Neuropsychologist",
+            "desc": "Assesses and develops cognitive functions: attention, memory, thinking."
+          },
+          "afk_instructor": {
+            "name": "🏃‍♀️ Adaptive physical education instructor",
+            "desc": "Engages in corrective physical education to strengthen motor skills."
+          }
+        }
+      },
+      "gov_support": {
+        "title": "🏛 Government support",
+        "description": "Rights, benefits and document processing procedures.",
+        "items": {
+          "disability": {
+            "heading": "📄 How to apply for disability",
+            "text": "To apply for disability, you need to get a referral from a clinic, pass the MSE commission. Documents: certificates from specialists, medical record, parent's application. Contact the local social protection department or CSC."
+          },
+          "benefits": {
+            "heading": "💰 Benefits and payments",
+            "text": "Parents of children with disabilities have access to monthly care benefits, tax benefits, and compensation for technical rehabilitation aids."
+          },
+          "education": {
+            "heading": "🎓 Education for children with disabilities",
+            "text": "Inclusive classes, specialized schools, home and online learning are available. Registration through PMPK."
+          }
+        }
+      },
+      "centers": {
+        "title": "📍 Centers and institutions",
+        "description": "List of organizations you can contact.",
+        "cities": {
+          "almaty": "Almaty",
+          "astana": "Astana"
+        },
+        "places": {
+          "almaty": {
+            "center1": {
+              "name": "Speech Correction Center №1",
+              "address": "Zhandosov St. 120"
+            },
+            "center2": {
+              "name": "PMPK №3",
+              "address": "Abay Ave. 90"
+            }
+          },
+          "astana": {
+            "center1": {
+              "name": "Psychological and Pedagogical Assistance Center",
+              "address": "Tauelsyzdyk St. 50"
+            }
+          }
+        }
+      }
+    }
+  }
+}
