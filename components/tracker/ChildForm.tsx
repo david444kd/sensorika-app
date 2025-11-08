@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { generateChildReport } from "@/lib/tracker/report"
 
 export interface ChildFormValues {
   name: string
@@ -19,9 +20,14 @@ export function ChildForm({
   onCancel: () => void
   onSubmit: (values: ChildFormValues) => void
 }) {
-  const { register, handleSubmit } = useForm<ChildFormValues>({
+  const { register, handleSubmit, getValues } = useForm<ChildFormValues>({
     defaultValues,
   })
+
+  const handleGenerateReport = () => {
+    const values = getValues()
+    generateChildReport(values)
+  }
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
@@ -37,11 +43,19 @@ export function ChildForm({
         <Label htmlFor="comment">Комментарий / особенности</Label>
         <Textarea id="comment" placeholder="Введите комментарий специалиста" rows={4} {...register("comment")} />
       </div>
-      <div className="flex justify-end gap-3">
-        <Button type="button" variant="outline" onClick={onCancel}>
+      <Button 
+        type="button" 
+        variant='outline' 
+        className="w-full" 
+        onClick={handleGenerateReport}
+      >
+        Отчет для родителя
+      </Button>
+      <div className="flex gap-0">
+        <Button type="button" variant="outline" onClick={onCancel} className="w-1/2 rounded-r-none">
           Отмена
         </Button>
-        <Button type="submit">
+        <Button type="submit" className="w-1/2 rounded-l-none">
           Сохранить
         </Button>
       </div>
