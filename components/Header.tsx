@@ -19,7 +19,7 @@ export default function Header() {
 
   const handleLocaleChange = (newLocale: string) => {
     const segments = pathname.split('/').filter(Boolean)
-    const possibleLocales = ['ru', 'en']
+    const possibleLocales = ['ru', 'en', 'kz']
     const firstSegment = segments[0]
     const isLocaleInPath = possibleLocales.includes(firstSegment)
     const pathWithoutLocale = isLocaleInPath
@@ -52,6 +52,7 @@ export default function Header() {
           <SelectContent>
             <SelectGroup>
               <SelectItem value='ru'>RU</SelectItem>
+              <SelectItem value='kz'>KZ</SelectItem>
               <SelectItem value='en'>EN</SelectItem>
             </SelectGroup>
           </SelectContent>
