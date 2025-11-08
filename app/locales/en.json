@@ -298,6 +298,40 @@
   },
   "Roadmap": {
     "sections": {
+      "correction_plan": {
+        "title": "🔥 Step-by-step Correction Plan",
+        "description": "Detailed action plan for parents and specialists to support the child's development. Each step includes recommendations and actions to help the child progress.",
+        "steps": [
+          {
+            "heading": "📝 Step 1: Diagnosis and Assessment",
+            "text": "Conduct a comprehensive assessment: speech therapist, neuropsychologist, special education teacher. Identify strengths, weaknesses, problems, and needs of the child."
+          },
+          {
+            "heading": "📊 Step 2: Individual Plan Development",
+            "text": "Based on the assessment, specialists create an individual correction plan: goals, objectives, exercises, and schedule of sessions."
+          },
+          {
+            "heading": "🏃‍♂️ Step 3: Starting Correction Sessions",
+            "text": "Regular sessions with a speech therapist, psychologist, and adaptive physical education instructor. Includes exercises for speech, cognitive and motor skills, and emotional regulation."
+          },
+          {
+            "heading": "🏠 Step 4: Home Support",
+            "text": "Follow recommendations and exercises at home. Parents participate, track progress, and help reinforce skills."
+          },
+          {
+            "heading": "📈 Step 5: Monitoring and Adjustment",
+            "text": "Regularly evaluate the child's progress and adjust the plan as needed."
+          },
+          {
+            "heading": "🌍 Step 6: Integration into Society",
+            "text": "Gradual inclusion of the child in educational and social activities. Development of communication and independence skills."
+          },
+          {
+            "heading": "🤝 Step 7: Support for Specialists and Parents",
+            "text": "Regular consultations with specialists, sharing experience with other parents. Ensuring ongoing support at all stages."
+          }
+        ]
+      },
       "specialists": {
         "title": "👩‍⚕️ Specialists",
         "description": "Which specialists to contact and in what cases.",
@@ -360,6 +394,17 @@
           }
         }
       }
+    },
+    "city": {
+      "placeholder": "City",
+      "astana": "Astana",
+      "almaty": "Almaty",
+      "shymkent": "Shymkent",
+      "karaganda": "Karaganda",
+      "atyrau": "Atyrau"
+    },
+    "diagnosis": {
+      "placeholder": "Diagnosis"
     }
   }
 }

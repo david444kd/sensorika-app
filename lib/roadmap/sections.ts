@@ -1,29 +1,64 @@
 export function getSections(t: (key: string) => string) {
   return [
     {
-      id: "specialists",
+      id: 'correction_plan',
+      title: t('Roadmap.sections.correction_plan.title'),
+      description: t('Roadmap.sections.correction_plan.description'),
+      steps: [
+        {
+          heading: t('Roadmap.sections.correction_plan.steps.0.heading'),
+          text: t('Roadmap.sections.correction_plan.steps.0.text'),
+        },
+        {
+          heading: t('Roadmap.sections.correction_plan.steps.1.heading'),
+          text: t('Roadmap.sections.correction_plan.steps.1.text'),
+        },
+        {
+          heading: t('Roadmap.sections.correction_plan.steps.2.heading'),
+          text: t('Roadmap.sections.correction_plan.steps.2.text'),
+        },
+        {
+          heading: t('Roadmap.sections.correction_plan.steps.3.heading'),
+          text: t('Roadmap.sections.correction_plan.steps.3.text'),
+        },
+        {
+          heading: t('Roadmap.sections.correction_plan.steps.4.heading'),
+          text: t('Roadmap.sections.correction_plan.steps.4.text'),
+        },
+        {
+          heading: t('Roadmap.sections.correction_plan.steps.5.heading'),
+          text: t('Roadmap.sections.correction_plan.steps.5.text'),
+        },
+        {
+          heading: t('Roadmap.sections.correction_plan.steps.5.heading'),
+          text: t('Roadmap.sections.correction_plan.steps.5.text'),
+        },
+      ],
+    },
+    {
+      id: 'specialists',
       title: t('Roadmap.sections.specialists.title'),
       description: t('Roadmap.sections.specialists.description'),
       specialists: [
         {
           name: t('Roadmap.sections.specialists.items.speech_therapist.name'),
           desc: t('Roadmap.sections.specialists.items.speech_therapist.desc'),
-          phone: "+7 777 111 22 33",
+          phone: '+7 777 111 22 33',
         },
         {
           name: t('Roadmap.sections.specialists.items.neuropsychologist.name'),
           desc: t('Roadmap.sections.specialists.items.neuropsychologist.desc'),
-          phone: "+7 705 555 66 77",
+          phone: '+7 705 555 66 77',
         },
         {
           name: t('Roadmap.sections.specialists.items.afk_instructor.name'),
           desc: t('Roadmap.sections.specialists.items.afk_instructor.desc'),
-          phone: "+7 701 999 88 44",
+          phone: '+7 701 999 88 44',
         },
       ],
     },
     {
-      id: "gov_support",
+      id: 'gov_support',
       title: t('Roadmap.sections.gov_support.title'),
       description: t('Roadmap.sections.gov_support.description'),
       sections: [
@@ -42,7 +77,7 @@ export function getSections(t: (key: string) => string) {
       ],
     },
     {
-      id: "centers",
+      id: 'centers',
       title: t('Roadmap.sections.centers.title'),
       description: t('Roadmap.sections.centers.description'),
       centers: [
@@ -51,13 +86,17 @@ export function getSections(t: (key: string) => string) {
           list: [
             {
               name: t('Roadmap.sections.centers.places.almaty.center1.name'),
-              address: t('Roadmap.sections.centers.places.almaty.center1.address'),
-              phone: "+7 727 333 44 55",
+              address: t(
+                'Roadmap.sections.centers.places.almaty.center1.address'
+              ),
+              phone: '+7 727 333 44 55',
             },
             {
               name: t('Roadmap.sections.centers.places.almaty.center2.name'),
-              address: t('Roadmap.sections.centers.places.almaty.center2.address'),
-              phone: "+7 727 222 11 00",
+              address: t(
+                'Roadmap.sections.centers.places.almaty.center2.address'
+              ),
+              phone: '+7 727 222 11 00',
             },
           ],
         },
@@ -66,8 +105,10 @@ export function getSections(t: (key: string) => string) {
           list: [
             {
               name: t('Roadmap.sections.centers.places.astana.center1.name'),
-              address: t('Roadmap.sections.centers.places.astana.center1.address'),
-              phone: "+7 7172 777 88 99",
+              address: t(
+                'Roadmap.sections.centers.places.astana.center1.address'
+              ),
+              phone: '+7 7172 777 88 99',
             },
           ],
         },
