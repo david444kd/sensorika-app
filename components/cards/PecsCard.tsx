@@ -13,7 +13,7 @@ export default function PecsCard({item}: {item:CardItem}) {
       );
     }}>
       <div className="relative w-full aspect-4/3 bg-muted">
-        <Image src={item.imageSrc} alt={item.imageAlt} fill className="object-cover" />
+        <img src={item.imageSrc} alt={item.imageAlt} className="object-cover" />
         <div className="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:bg-primary/90 transition-colors shadow-lg">
           <Mic className="w-5 h-5 text-primary-foreground" />
         </div>

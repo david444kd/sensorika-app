@@ -10,7 +10,7 @@ export type CardItem = {
 export function getCards(t: (key: string) => string): Record<Category, CardItem[]> {
   return {
     eat: [
-      { title: t('Cards.items.eat.apple_juice.title'), description: t('Cards.items.eat.apple_juice.description'), imageSrc: "../eat/apple_juice.png", imageAlt: t('Cards.items.eat.apple_juice.imageAlt') },
+      { title: t('Cards.items.eat.apple_juice.title'), description: t('Cards.items.eat.apple_juice.description'), imageSrc: "/eat/apple_juice.png", imageAlt: t('Cards.items.eat.apple_juice.imageAlt') },
       { title: t('Cards.items.eat.apple.title'), description: t('Cards.items.eat.apple.description'), imageSrc: "/eat/apple.jpg", imageAlt: t('Cards.items.eat.apple.imageAlt') },
       { title: t('Cards.items.eat.banana.title'), description: t('Cards.items.eat.banana.description'), imageSrc: "/eat/banana.jpg", imageAlt: t('Cards.items.eat.banana.imageAlt') },
       { title: t('Cards.items.eat.burger.title'), description: t('Cards.items.eat.burger.description'), imageSrc: "/eat/burger.jpg", imageAlt: t('Cards.items.eat.burger.imageAlt') },
