@@ -16,6 +16,10 @@
     "cards": {
       "label": "PECS Cards",
       "description": "PECS Cards"
+    },
+    "games": {
+      "label": "Games",
+      "description": "Educational games"
     }
   },
   "Tracker": {
@@ -405,6 +409,22 @@
     },
     "diagnosis": {
       "placeholder": "Diagnosis"
+    }
+  },
+  "Games": {
+    "title": "Games",
+    "description": "Educational games for children",
+    "tabs": {
+      "aromaloto": "Aromaloto",
+      "soundloto": "Soundloto"
+    },
+    "aromaloto": {
+      "title": "Aromoloto",
+      "description": "Aromaloto is designed for children and the whole family.\n\nAromaloto is the only game that develops the sense of smell. It develops all types of memory: visual, motor, figurative, and olfactory. Creates new neural connections. Made from safe natural materials.\nA board game for any age, from 2 years old.\n\n1. Development of smell: Playing aromatic lotto helps develop children's sense of smell and learn to recognize various scents.\n\n2. Improvement of memory and attention: Children must remember and associate scents with specific objects or products, which contributes to the development of memory and attention.\n\n3. Exciting pastime: Playing aromatic lotto can be an exciting and interesting activity for children, especially if played with family or friends.\n\n4. Development of social skills: Playing aromatic lotto can contribute to the development of children's communication skills, as they can discuss and communicate delicately with each other.\n\n5. Learning new knowledge: Playing aromatic lotto can be not only exciting but also educational, as children can learn about various scents and products.\n\nThus, aromaloto for children can be a useful and developmental activity that combines learning, fun, and the development of the sense of smell.\n\nAromatic lotto is a game aimed at improving sensory integration. It develops smell, memory, attentiveness, logic, spatial orientation, and perseverance.\n\nGAME VARIANTS:\n\n1. Guess the scent: Participants must try to guess the scents and place the jar on the corresponding field.\n\n2. Scent recognition competition: Participants must take turns trying to guess the scents extracted from the aromaloto.\n\n\"Aromatic Memory\" Game: Participants must remember the scents they smell from the aromaloto, and then arrange the cards of these scents.\n\n3. Creating scent blends: Participants can try creating their own unique aromatic blends using aromaloto and various essential oils.\n\n4. Aromatic lottery: Participants can play a lottery where they have to guess scents to win prizes.\n\n5. Scent hunt: Participants can organize competitions to find specific scents hidden in different places, using aromaloto for clues.\n\n6. \"Aromatic Memory\" Game: Participants must remember the scents they smell from the aromaloto, and then guess them after the aromaloto is closed.\n\n\n\nI created 3 sets with 10 scents in each.\n\"FRUITS/BERRIES\" Set\n🍎 apple\n🍊 orange\n🍇 grape\n🍈 melon\n🍉 watermelon\n🥥 coconut\n🍒 cherry\n🍓 strawberry\n🍌 banana\n🍍 pineapple\n\n\"SWEETS\" Set\n•chocolate\n•ice cream\n•vanilla\n•cinnamon\n•condensed milk\n•chewing gum\n•coca-cola\n•honey\n•coffee\n•yogurt\n\n\"NATURE\" Set\n•fir\n•lavender\n•lilac\n•jasmine\n•vanilla\n•mint\n•rose\n•almond\n•barberry\n•violet\n\n📦 Each set includes:\n•10 jars with scents\n•Individual cards for each scent in Russian and Kazakh\n•Lotto field\n•Motivational stickers\n•Wooden box for storage."
+    },
+    "soundloto": {
+      "title": "Soundloto",
+      "description": "The game \"Soundloto\" is an exciting game that helps develop not only auditory perception but also to learn new sounds. I also combined such games as \"FLAGOMANIA\", \"GUESS THE MELODY\" and GREAT WORLD AND KAZAKH COMPOSERS into one big game SOUNDLOTO.\n\nThis game features 12 categories, a player with 195 interesting sounds, 12 fields, 140 cards in two languages, and chips.\n+ educational songs, such as:\n\n LOGORHYTHMICS — is a technique where speech, music, and movements are combined into game exercises.\nIt develops the child's speech, hearing, rhythm, coordination, memory, and emotional expressiveness.\n\nTONGUE TWISTERS — are short rhythmic phrases or syllable combinations that help children train clear pronunciation of sounds and syllables, develop diction, hearing, and a sense of rhythm.\n\nAUDIO FAIRY TALES in two languages — are fairy tales in audio format that a child listens to instead of reading.\nThey help:\n • develop auditory attention and imagination,\n • enrich vocabulary,\n • train memory,\n • form skills of speech perception by ear,\n • soothe and set up for sleep.\n\nAND EDUCATIONAL SONGS in Russian and Kazakh.\n\nChoosing a category from the list, and there are 12 of them:\nhousehold sounds \nwild animals \ndomestic animals \ngreat world and Kazakh composers \nmusical instruments \ncartoons \nnature \nbirds \ntransport \nmovies \nemotions \nlanguages \nyour child learns and develops auditory perception, memory, and speech.\n\nIt is convenient to play with it everywhere: on the road, at home, visiting, on a train, or on a plane.\n\nSound Lotto is a cool tool for any specialist working with children."
     }
   }
 }

@@ -26,4 +26,10 @@ export const routes: NavItem[] = [
     descriptionKey: "cards",
     icon: CreditCard,
   },
+  {
+    href: "/games",
+    labelKey: "games",
+    descriptionKey: "games",
+    icon: Gamepad2,
+  },
 ]
